@@ -27,6 +27,7 @@ white
 }
 
 body {
+    margin: 0;
     background-color: #4169E1;
     font-family: 'Montserrat', serif;
 }
@@ -35,6 +36,11 @@ html, body {
     height: 100%;
     display: flex;
     flex-direction: column;
+    width: 100%;
+    overflow-x: hidden; /* 🔧 Evita scroll horizontal si algo se pasa del ancho */
+    margin: 0;
+    padding: 0;
+
 }
 
 /* Encabezado */
@@ -45,7 +51,7 @@ header {
     align-items: center;
     padding: 0.5rem 1rem;
     width: 100%;
-    gap: 2rem; /* espacio entre logo y links */
+    gap: 2rem;
 }
 
 header ul {
@@ -361,17 +367,119 @@ footer button:hover {
 
 /*responsivo header y footer*/
 /*header y footer se rompen en mobile L 425px*/
+@media (max-width: 375px) {
+    header a {
+        font-size: 0.75rem;
+    }
 
+    header ul {
+        gap: 0.5rem;
+    }
+}
 
+@media (max-width: 320px) {
+    header a {
+        font-size: 0.7rem;
+    }
 
+    header ul {
+        gap: 0.2rem;
+    }
+}
+
+@media (max-width: 425px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        align-items: center;
+    }
+
+}
+
+/*main del menu principal en 320px*/
+@media (max-width: 320px) {
+    .nav-links {
+        gap: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .nav-links a {
+        font-size: 0.85rem;
+    }
+}
 
 /*main sobre nosotros arrancan a romperse*/
 /*laptop 1024*/
-/*tablet 768*/
-/*mobile 425*/
-/*mobile 375*/
-/*mobile 320*/
+@media (max-width: 1024px) {
+    .texto1,
+    .texto2,
+    .texto3,
+    .texto4 {
+        margin: 0 4rem;
+    }
 
+    .grid-container img {
+        width: 12rem;
+        height: auto;
+    }
+}
+
+/*tablet 768*/
+@media (max-width: 768px) {
+    .texto1,
+    .texto2,
+    .texto3,
+    .texto4 {
+        margin: 0 1.5rem;
+        font-size: 0.95rem;
+    }
+
+    .grid-container img {
+        width: 10rem;
+        height: auto;
+    }
+}
+
+/*mobile 425*/
+@media (max-width: 425px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "foto1"
+            "texto1"
+            "foto2"
+            "texto2"
+            "foto3"
+            "texto3"
+            "foto4"
+            "texto4";
+        padding: 1rem;
+        row-gap: 1.5rem;
+    }
+
+    .grid-container img {
+        width: 100%;
+        height: auto;
+        max-width: 300px;
+        margin-bottom: 0.75rem;
+    }
+
+    .texto1,
+    .texto2,
+    .texto3,
+    .texto4 {
+        margin: 0;
+        padding: 0 1rem;
+        text-align: center;
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+    }
+}
 
 
 /* main productos */
