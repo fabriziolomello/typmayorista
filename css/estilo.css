@@ -108,8 +108,192 @@ main {
     font-weight: bold;
 }
 
+/*main sobre nosotros*/
 
-/* Pie de pagina */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+    "foto1 texto1"
+    "texto2 foto2"
+    "foto3 texto3"
+    "texto4 foto4";
+    padding: 20px;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.foto1 {
+    grid-area: foto1;
+}
+.texto1 {
+    grid-area: texto1;
+}
+.texto2 {
+    grid-area: texto2;
+}
+.foto2 {
+    grid-area: foto2;
+}
+.foto3 {
+    grid-area: foto3;
+}
+.texto3 {
+    grid-area: texto3;
+}
+.texto4 {
+    grid-area: texto4;
+}
+.foto4 {
+    grid-area: foto4;
+}
+
+.grid-container img {
+    width: 15.625rem;
+    height: 18.75rem;  
+}
+
+.texto1{
+    margin-right: 12.5rem;
+}
+.texto2{
+    margin-left: 12.5rem;
+}
+.texto3{
+    margin-right: 12.5rem;
+}
+.texto4{
+    margin-left: 12.5rem;
+}
+
+/*main de los productos*/
+
+.categoria h2 {
+    margin-bottom: .625rem;
+    margin-left: .625rem;
+    font-size: 1.5rem;
+    border-bottom: .1875rem;
+    display: inline-block;
+    padding-bottom: .3125rem;
+    padding-left: .625rem;
+}
+
+.imagenes {
+    display: flex;
+    gap: 1.25rem;
+    margin-top: .625rem;
+    flex-wrap: wrap;
+}
+.imagenes img{
+    margin-left: 1.25rem;
+    margin-bottom: 1.25rem;
+    border-radius: .3125rem;
+}
+
+.linea {
+    border: 2px solid black;
+    width: 98%;
+    margin: 0 auto;
+}
+
+/*formulario*/
+
+.form-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* ocupa toda la altura visible */
+    color: white;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 0 auto; /* Esto centra el formulario en la pantalla */
+    padding: 20px;
+    text-align: left; /* Esto alinea el contenido a la izquierda */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centrado vertical */
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input[type="text"],
+input[type="radio"],
+input[type="checkbox"] {
+    margin-top: 5px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 8px; /* separa el input del texto */
+}
+
+
+input[type="text"] {
+    padding: 8px;
+    background-color: #888;
+    border: none;
+    color: white;
+}
+
+.radio-group,
+.checkbox-group {
+    text-align: left;
+    padding-left: 0px;
+}
+
+button {
+    width: fit-content;
+    align-self: center;
+    background-color: #888;
+    color: black;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+/*main de sucursales*/
+
+.titulos-nav {
+    padding-left: 1.875rem;
+    font-family: "Montserrat", sans-serif;
+}
+
+.local-container {
+    padding: 1.25rem;
+    margin: 1.25rem;
+}
+
+.local {
+    border-radius: 5%;
+}
+
+/*main de envios*/
+
+.envios-container{
+    display: flex;
+    justify-content: flex-start; /* o space-between/space-around si querés separación */
+    gap: 1.25rem;
+    padding: 1.25rem;
+}
+
+.envios-container img {
+    width: 400px;
+    height: 200px;
+    object-fit: contain; /* o "cover" si preferís que se recorten para llenar el espacio */
+}
+
+    /* Pie de pagina */
 footer {
     background-color: #000;
     color: white;
@@ -174,4 +358,42 @@ footer button:hover {
     height: 35px;
     cursor: pointer;
 }
+
+/*responsivo header y footer*/
+/*header y footer se rompen en mobile L 425px*/
+
+
+
+
+/*main sobre nosotros arrancan a romperse*/
+/*laptop 1024*/
+/*tablet 768*/
+/*mobile 425*/
+/*mobile 375*/
+/*mobile 320*/
+
+
+
+/* main productos */
+
+
+
+/* main contacto formulario se rompe*/
+/*laptop 1024*/
+/*tablet 768*/
+/*mobile 425*/
+/*mobile 375*/
+/*mobile 325*/
+
+
+/* main de envios */
+/*mobile 425*/
+/*mobile 375*/
+/*mobile 320*/
+
+
+/* main de sucursales */
+/*mobile 425*/
+/*mobile 375*/
+/*mobile 320*/
 

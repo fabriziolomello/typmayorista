@@ -33,51 +33,38 @@
         </section>
 
         <!-- formulario de contacto -->
-        <p>Por favor responde el formulario para que uno de nuestros vendedores se comunique con vos</p>
         
-        <form action="form-contacto">
-            <label for="">Nombre:
-            <input type="text" name="" id="" placeholder="Escribe tu nombre">
-            </label>
+        <section class="form-section">
+        
+        <div class="form-container">
+        <p>Por favor responde el formulario para que uno de nuestros vendedores se comunique con vos</p><br>
+        <form action="form-contacto" class="formulario">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Escribe tu nombre">
+            <label for="edad">Edad:</label>
+            <input type="text" name="edad" id="edad" placeholder="Escribe tu edad">
+            <label for="celular">Celular:</label>
+            <input type="text" name="celular" id="celular" placeholder="Escribe tu celular">
 
-            <label for="">Edad:
-            <input type="text" name="" id="" placeholder="Escribe tu edad">
-            </label>
-
-            <label for="">Celular:
-            <input type="text" name="" id="" placeholder="Escribe tu celular">
-            </label>
-
-            <legend>Elegí una opcion sobre vos</legend>
-            <label for="">
-                <input type="radio" name="" id="">Profesor
-            </label>
-            <label for="">
-                <input type="radio" name="" id="">Dueño de un club
-            </label>
-            <label for="">
-                <input type="radio" name="" id="">Revendedor
-            </label>
-
-            <legend>Que deportes de interesan</legend>
-            <label for="">
-                <input type="checkbox" name="" id="">Tenis y padel
-            </label>
-            <label for="">
-                <input type="checkbox" name="" id="">Hockey
-            </label>
-            <label for="">
-                <input type="checkbox" name="" id="">Artes marciales
-            </label>
-            <label for="">
-                <input type="checkbox" name="" id="">Fitness
-            </label>
-            <label for="">
-                <input type="checkbox" name="" id="">Indumentaria
-            </label>
-
-            <input type="submit" value="Enviar">
+            <p>Elegí una opcion sobre vos</p>
+            <div class="radio-group">
+                <label><input type="radio" name="perfil" value="profesor">Profesor</label><br>
+                <label><input type="radio" name="perfil" value="club">Dueño de un club</label><br>
+                <label><input type="radio" name="perfil" value="revendedor">Revendedor</label>
+            </div>
+            <p>Que deportes de interesan</p>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="deporte" value="tenis">Tenis y padel</label><br>
+                <label><input type="checkbox" name="deporte" value="hockey">Hockey</label><br>
+                <label><input type="checkbox" name="deporte" value="artes-marciales">Artes marciales</label><br>
+                <label><input type="checkbox" name="deporte" value="fitness">Fitness</label><br>
+                <label><input type="checkbox" name="deporte" value="suplementos">Suplementos</label>
+            </div>
+            <br><br>
+            <button type="submit">Enviar</button>
         </form>
+        </div>
+        </section>
     </main>
 
     <!-- pie de pagina -->
