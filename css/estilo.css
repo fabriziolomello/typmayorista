@@ -188,14 +188,17 @@ main {
 
 .imagenes {
     display: flex;
-    gap: 1.25rem;
-    margin-top: .625rem;
     flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1.25rem;
+    padding-left: 1.25rem;
 }
-.imagenes img{
-    margin-left: 1.25rem;
-    margin-bottom: 1.25rem;
-    border-radius: .3125rem;
+
+.imagenes img {
+    width: 200px;
+    height: auto;
+    border-radius: 0.3125rem;
+    margin-bottom: 1.5rem;
 }
 
 .linea {
@@ -482,9 +485,21 @@ footer button:hover {
 }
 
 
-/* main productos */
+/* main productos 425px*/
+@media (max-width: 425px) {
+    .imagenes {
+        justify-content: space-between;
+        padding: 0 0.5rem;
+        gap: 0.5rem;
+    }
 
-
+    .imagenes img {
+        width: 30%;
+        height: auto;
+        margin: 0;
+        margin-bottom: .5rem;
+    }
+}
 
 /* main contacto formulario se rompe*/
 /*laptop 1024*/
