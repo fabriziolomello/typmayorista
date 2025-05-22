@@ -1,0 +1,20 @@
+{
+  "name": "typ-mayorista",
+  "version": "1.0.0",
+  "description": "Aca voy a explicar un poco del proyecto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabriziolomello/typmayorista.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fabriziolomello/typmayorista/issues"
+  },
+  "homepage": "https://github.com/fabriziolomello/typmayorista#readme"
+}

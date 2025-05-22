@@ -1,0 +1,70 @@
+footer {
+    background-color: $negro;
+    color: $blanco;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    font-family: $fuente-principal;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    input[type="email"] {
+        padding: 0.3rem 0.5rem;
+        font-size: 0.9rem;
+        background-color: $gris-claro;
+        border: none;
+        width: 200px;
+        font-weight: bold;
+        text-align: center;
+        margin: 0;
+    }
+
+    button {
+        @extend %boton-base;
+        background-color: $gris-medio;
+        color: $blanco;
+
+    &:hover {
+        background-color: $gris-hover;
+    }
+    }
+
+    .footer-column {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem;
+
+    p {
+        margin: 0;
+    }
+    }
+
+    .footer-logo {
+    img {
+        height: 100px;
+        filter: grayscale(100%);
+    }
+    }
+
+    .redes-container {
+        display: flex;
+        gap: 10px;
+    }
+
+    .logoredes {
+        width: 35px;
+        height: 35px;
+        cursor: pointer;
+    }
+  //MEDIA QUERY RESPONSIVE
+    @include responsive(mobile) {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        .footer-column {
+            align-items: center;
+        }
+    }
+}

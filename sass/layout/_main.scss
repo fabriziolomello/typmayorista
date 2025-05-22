@@ -1,0 +1,45 @@
+main {
+    flex: 1;
+}
+
+.main-section {
+    text-align: center;
+    padding: 50px 20px;
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 4px solid $negro;
+    border-bottom: 4px solid $negro;
+    width: 98%;
+    margin: 0 auto;
+
+    a {
+    color: $blanco;
+    text-decoration: none;
+    font-weight: bold;
+
+    &:hover {
+        text-decoration: underline;
+    }
+    }
+  //RESPONSIVE XS (320px)
+    @include responsive(xs) {
+        gap: 20px;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        a {
+            font-size: 0.85rem;
+        }
+    }    
+}

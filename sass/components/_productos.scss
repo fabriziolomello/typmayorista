@@ -1,0 +1,47 @@
+.categoria {
+    h2 {
+        margin-bottom: .625rem;
+        margin-left: .625rem;
+        font-size: 1.5rem;
+        border-bottom: .1875rem;
+        display: inline-block;
+        padding-bottom: .3125rem;
+        padding-left: .625rem;
+    }
+}
+
+.imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 1.25rem;
+    padding-left: 1.25rem;
+
+    img {
+        width: 200px;
+        height: auto;
+        border-radius: 0.3125rem;
+        margin-bottom: 1.5rem;
+        animation: slideInRight 0.6s ease-out;
+        animation-fill-mode: both;
+    }
+    //RESPONSIVE MOBILE (425px)
+    @include responsive(mobile) {
+        justify-content: space-between;
+        padding: 0 0.5rem;
+        gap: 0.5rem;
+
+        img {
+            width: 30%;
+            height: auto;
+            margin: 0;
+            margin-bottom: 0.5rem;
+        }
+    }
+}
+
+.linea {
+    border: 2px solid $negro;
+    width: 98%;
+    margin: 0 auto;
+}

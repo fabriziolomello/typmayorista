@@ -1,0 +1,24 @@
+body {
+    margin: 0;
+    background-color: $azul;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+a, button {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  display: inline-block;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
