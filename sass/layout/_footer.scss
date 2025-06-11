@@ -67,4 +67,25 @@ footer {
             align-items: center;
         }
     }
+
+    @include responsive(xs) {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+
+    .footer-column {
+        align-items: center;
+        text-align: center;
+    }
+
+    input[type="email"] {
+        width: 100%;
+        max-width: 250px;
+    }
+
+    .redes-container {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
 }
